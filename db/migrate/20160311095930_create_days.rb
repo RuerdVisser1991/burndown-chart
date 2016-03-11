@@ -3,7 +3,7 @@ class CreateDays < ActiveRecord::Migration
     create_table :days do |t|
       t.date :date
       t.integer :points
-      t.integer :sprint-id
+      t.integer :sprint_id
 
       t.timestamps null: false
     end

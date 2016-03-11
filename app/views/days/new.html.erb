@@ -1,0 +1,23 @@
+<h1>MAAK IETS AAN</h1>
+<%= form_for :day, url: days_path do |d| %>
+
+	<p>
+		<b><%= d.label :sprint_id %></b><br/>
+		<%= d.number_field :sprint_id %>
+	</p>
+
+	<p>
+		<b><%= d.label :date %></b><br/>
+		<%= d.date_field :date %>
+	</p>
+
+	<p>
+		<b><%= d.label :points %></b><br/>
+		<%= d.number_field :points %>
+	</p>
+
+	<p>
+		<%= d.submit %>
+	</p>
+
+<% end %>
