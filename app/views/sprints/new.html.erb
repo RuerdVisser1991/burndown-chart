@@ -1,0 +1,14 @@
+<h1>Sprint toevoegen</h1>
+<%= form_for :sprint, url: sprints_path do |s| %>
+
+	<p>
+		<b><%= s.label :sprint %></b><br />
+		<%= s.number_field :sprint %>
+	</p>
+
+	<p>
+		<b><%= s.label :punten %></b><br />
+		<%= s.number_field :punten %>
+	</p>
+
+<% end %>
