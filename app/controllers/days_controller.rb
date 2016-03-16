@@ -1,4 +1,7 @@
 class DaysController < ApplicationController
+	def new
+	end
+
 	def index
 		@days = Day.all
 	end
@@ -11,7 +14,6 @@ class DaysController < ApplicationController
 	end
 
 	private
-
 	def day_params
 		params.require(:day).permit(:sprint_id, :date, :points)
 	end
