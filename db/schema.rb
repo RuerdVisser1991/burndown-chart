@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20160311100427) do
 
+  create_table "days", force: :cascade do |t|
+    t.date     "date"
+    t.integer  "points"
+    t.integer  "sprint_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sprints", force: :cascade do |t|
     t.integer  "sprint_id"
     t.integer  "total"
