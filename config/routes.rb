@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'sprints#new'
+  root 'burndowns#index'
 
   resources :sprints
 end
