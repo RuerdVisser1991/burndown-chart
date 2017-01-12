@@ -1,1 +1,56 @@
-<h1>MARK IS GOUD</h1>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<%
+@hoi = []
+@hoi = ["1", "2", "3", "4"]
+%>
+<script>
+	$(function () {
+		$('#container').highcharts({
+			chart: {
+				type: 'areaspline'
+			},
+			title: {
+				text: 'Burndown Chart - Sprint 1'
+			},
+			xAxis: {
+				categories: [
+					'Maandag',
+					'Dinsdag',
+					'Woensdag',
+					'Donderdag',
+					'Vrijdag',
+					'Maandag',
+					'Dinsdag',
+					'Woensdag',
+					'Donderdag',
+					'Vrijdag'
+				]
+			},
+			yAxis: {
+				title: {
+					text: 'Punten'
+				}
+			},
+			tooltip: {
+				shared: true,
+				valueSuffix: ' units'
+			},
+			credits: {
+				enabled: false
+			},
+			plotOptions: {
+				areaspline: {
+					fillOpacity: 0.5
+				}
+			},
+			series: [{
+				name: 'Gewenst',
+				data: [10,20,30,40,50,60,70,80,90,100]
+			}, {
+				name: 'Punten',
+				data: '<%= @hoi %>'
+			}]
+		});
+	});
+</script>
+<%= @hoi %>
